@@ -70,7 +70,7 @@
 
     NSString *scopeStr = @"scope=likes+comments+relationships";
     
-    NSString *url = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&display=touch&%@&redirect_uri=http://buza.mitplw.com&response_type=code", INSTAGRAM_CLIENT_ID, scopeStr];
+    NSString *url = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&display=touch&%@&redirect_uri=%@&response_type=code", INSTAGRAM_CLIENT_ID, scopeStr, INSTAGRAM_CALLBACK_BASE];
     
     [self loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
